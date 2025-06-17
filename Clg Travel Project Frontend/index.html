@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VramanYatri</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/" aria-label="VramanYatri Home">
+                    <img src="c:\Users\sagni\Desktop\Project\Clg Travel Project Frontend\logo.png.png" alt="VramanYatri Logo" style="height: 450px;">
+                </a>
+            </div>
+            <nav class="main-nav">
+             <ul>
+    <li><a href="#" class="active">হোম পেজ</a></li>
+    <li><a href="#">বাস পরিষেবা</a></li>
+    <li><a href="#">রেলওয়ে পরিষেবা</a></li>
+    <li><a href="#">ফ্লাইট পরিষেবা</a></li>
+    <li><a href="#">হোটেল পরিষেবা</a></li>
+    <li><a href="#">ডিলস সম্পর্কে</a></li>
+    <li><a href="#">যোগাযোগ করুন</a></li>
+</ul>
+            </nav>
+            <div class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <!-- Hero section with search form -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>চলুন বেরিয়ে পড়ি – আজই বুক করুন!</h2>
+                <p>ভ্রমণের সেরা অফার এখন আপনার হাতের মুঠোয় – বাস, রেল, ফ্লাইট ও হোটেল!</p>
+            </div>
+            
+            <div class="search-container">
+    <div class="search-tabs">
+        <button class="tab-btn active" data-tab="bus">বাস</button>
+        <button class="tab-btn" data-tab="railway">রেল</button>
+        <button class="tab-btn" data-tab="flights">বিমান</button>
+        <button class="tab-btn" data-tab="hotels">হোটেল</button>
+        <button class="tab-btn" data-tab="packages">প্যাকেজ</button>
+    </div>
+
+    <!-- Bus Search Form -->
+    <div class="search-form active" id="bus-form">
+        <form id="bus-booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bus-departure">ছাড়ার স্থান</label>
+                    <input type="text" id="bus-departure" name="bus-departure" placeholder="শহর বা টার্মিনাল লিখুন">
+                </div>
+                <div class="form-group">
+                    <label for="bus-destination">গন্তব্য</label>
+                    <input type="text" id="bus-destination" name="bus-destination" placeholder="শহর বা টার্মিনাল লিখুন">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bus-date">ভ্রমণের তারিখ</label>
+                    <input type="date" id="bus-date" name="bus-date">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bus-travelers">যাত্রী সংখ্যা</label>
+                    <select id="bus-travelers" name="bus-travelers">
+                        <option value="1">১ জন যাত্রী</option>
+                        <option value="2">২ জন যাত্রী</option>
+                        <option value="3">৩ জন যাত্রী</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bus-class">ক্লাস</label>
+                    <select id="bus-class" name="bus-class">
+                        <option value="ac">এসি</option>
+                        <option value="non-ac">নন-এসি</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="button" class="search-btn">বাস খুঁজুন <i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Train Search Form -->
+    <div class="search-form" id="railway-form">
+        <form id="train-booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="train-departure">ছাড়ার স্থান</label>
+                    <input type="text" id="train-departure" name="train-departure" placeholder="স্টেশন লিখুন">
+                </div>
+                <div class="form-group">
+                    <label for="train-destination">গন্তব্য</label>
+                    <input type="text" id="train-destination" name="train-destination" placeholder="স্টেশন লিখুন">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="train-date">ভ্রমণের তারিখ</label>
+                    <input type="date" id="train-date" name="train-date">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="train-travelers">যাত্রী সংখ্যা</label>
+                    <select id="train-travelers" name="train-travelers">
+                        <option value="1">১ জন যাত্রী</option>
+                        <option value="2">২ জন যাত্রী</option>
+                        <option value="3">৩ জন যাত্রী</option>
+                        <option value="4">৪ জন যাত্রী</option>
+                        <option value="5">৫ জন যাত্রী</option>
+                        <option value="6">৬ জন যাত্রী</option>
+                        <option value="7">৭ জন যাত্রী</option>
+                        <option value="8">৮ জন যাত্রী</option>
+                        <option value="9">৯ জন যাত্রী</option>
+                        <option value="10">১০ জন যাত্রী</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="train-class">ক্লাস</label>
+                    <select id="train-class" name="train-class">
+                        <option value="ac-1st">এসি ১ম শ্রেণি</option>
+                        <option value="ac-2nd">এসি ২য় শ্রেণি</option>
+                        <option value="ac-3rd">এসি ৩য় শ্রেণি</option>
+                        <option value="sleeper">স্লিপার</option>
+                        <option value="general">জেনারেল</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="button" class="search-btn">ট্রেন খুঁজুন <i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Flights Search Form -->
+    <div class="search-form" id="flights-form">
+        <form id="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="departure">ছাড়ার স্থান</label>
+                    <input type="text" id="departure" name="departure" placeholder="শহর বা এয়ারপোর্ট লিখুন">
+                </div>
+                <div class="form-group">
+                    <label for="destination">গন্তব্য</label>
+                    <input type="text" id="destination" name="destination" placeholder="শহর বা এয়ারপোর্ট লিখুন">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="departure-date">যাত্রার তারিখ</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+                <div class="form-group">
+                    <label for="return-date">ফিরে আসার তারিখ</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="travelers">ভ্রমণকারীর সংখ্যা</label>
+                    <select id="travelers" name="travelers">
+                        <option value="1">১ জন</option>
+                        <option value="2">২ জন</option>
+                        <option value="3">৩ জন</option>
+                        <option value="4">৪ জন</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="class">ক্লাস</label>
+                    <select id="class" name="class">
+                        <option value="economy">ইকোনমি</option>
+                        <option value="premium">প্রীমিয়াম ইকোনমি</option>
+                        <option value="business">বিজনেস</option>
+                        <option value="first">ফার্স্ট ক্লাস</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="button" class="search-btn">ফ্লাইট খুঁজুন <i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+                <!-- Hotels Search Form (Placeholder) -->
+            <div class="search-form" id="hotels-form">
+    <form id="hotels-booking-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="hotel-destination">গন্তব্য</label>
+                <input type="text" id="hotel-destination" name="hotel-destination" placeholder="শহর বা হোটেলের নাম লিখুন">
+            </div>
+            <div class="form-group">
+                <label for="check-in-date">চেক-ইন তারিখ</label>
+                <input type="date" id="check-in-date" name="check-in-date">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="check-out-date">চেক-আউট তারিখ</label>
+                <input type="date" id="check-out-date" name="check-out-date">
+            </div>
+            <div class="form-group">
+                <label for="guests">অতিথি</label>
+                <select id="guests" name="guests">
+                    <option value="1">১ জন</option>
+                    <option value="2">২ জন</option>
+                    <option value="3">৩ জন</option>
+                    <option value="4">৪ জন</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <button type="button" class="search-btn">হোটেল খুঁজুন <i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+
+<!-- প্যাকেজ অনুসন্ধান ফর্ম -->
+<div class="search-form" id="packages-form">
+    <form id="packages-booking-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="package-destination">গন্তব্য</label>
+                <input type="text" id="package-destination" name="package-destination" placeholder="গন্তব্য লিখুন">
+            </div>
+            <div class="form-group">
+                <label for="package-date">ভ্রমণের তারিখ</label>
+                <input type="date" id="package-date" name="package-date">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="package-travelers">যাত্রী সংখ্যা</label>
+                <select id="package-travelers" name="package-travelers">
+                    <option value="1">১ জন</option>
+                    <option value="2">২ জন</option>
+                    <option value="3">৩ জন</option>
+                    <option value="4">৪ জন</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <button type="button" class="search-btn">প্যাকেজ খুঁজুন <i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</section>
+
+    <!-- Promotional banner section -->
+    <section class="promotional-banner">
+        <div class="container">
+            <h2>চমৎকার অফার ও ছাড়</h2>
+            <div class="deals-container">
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
+                    <div class="deal-content">
+                        <h3>গোয়াভ্রমণ</h3>
+                        <p>ফ্লাইট ও হোটেল বুকিংয়ে পাচ্ছেন ৩০% পর্যন্ত ছাড় – হাতছাড়া করবেন না!</p>
+                        <a href="#" class="deal-btn">অফার দেখুন</a>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');"></div>
+                    <div class="deal-content">
+                        <h3>সৈকত স্বপ্ন</h3>
+                        <p>স্বপ্নের সৈকত ভ্রমণ এখন আরও সাশ্রয়ী – ৪০% পর্যন্ত ছাড়!</p>
+                        <a href="#" class="deal-btn">অফার দেখুন</a>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image" style="background-image: url('https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
+                    <div class="deal-content">
+                        <h3>হিমালয় নিবাস </h3>
+                        <p>শান্তির ছোঁয়া, এখন হাতের মুঠোয় — শুরু মাত্র ৮৯৯ টাকা থেকে!</p>
+                        <a href="#" class="deal-btn">অফার দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why choose us section -->
+    <section class="features">
+        <div class="container">
+            <h2>ভ্রমণযাত্রী-কে কেন বেছে নেবেন?</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>সেরা মূল্যের নিশ্চয়তা</h3>
+                    <p>আমরা ফ্লাইট, হোটেল এবং ছুটির প্যাকেজের জন্য সেরা দাম অফার করি।</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>নিরাপদ ও সুরক্ষিত বুকিং</h3>
+                    <p>আপনার ব্যক্তিগত এবং পেমেন্ট তথ্য সর্বোচ্চ নিরাপত্তা মানের সাথে সুরক্ষিত।</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>২৪/৭ গ্রাহক সহায়তা</h3>
+                    <p>আমাদের গ্রাহক সেবা দল আপনাকে সহায়তা করার জন্য ২৪/৭ উপলব্ধ।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>ভ্রমণযাত্রী</h3>
+                    <p>আপনার গন্তব্য, আমাদের দায়িত্ব </p>
+                </div>
+                <div class="footer-col">
+                    <h3>দ্রুত লিঙ্ক</h3>
+                    <ul>
+                        <li><a href="#">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                        <li><a href="#">প্রশ্নোত্তর</a></li>
+                        <li><a href="#">শর্তাবলী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ভ্রমণ পণ্য</h3>
+                    <ul>
+                        <li><a href="#">বাসের টিকেট</a></li>
+                        <li><a href="#">ট্রেনের টিকেট</a></li>
+                        <li><a href="#">ফ্লাইট</a></li>
+                        <li><a href="#">হোটেল</a></li>
+                        <li><a href="#">ছুটির প্যাকেজ</a></li>
+                        <li><a href="#">গাড়ি ভাড়া</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ভ্রমণযাত্রী. All rights reserved. Created by Sagnik, Sourish, Sudip, Saheli</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
